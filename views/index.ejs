@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>My Travel Log
+		</title>
+	<link rel="stylesheet" href="style.css"/>
+	</head>
+
+	<body>
+
+	<h1> My Travel Adventures!</h1>
+    <%
+      for (var i = 0; i < locations.length; i++) {
+        var location = locations[i];
+   %>
+  <div>
+		<h2> <%=location.name%>, <%=location.country%></h2>
+		<img src="/images/<%=location.image_name%>"/>
+	<p>
+		<h4><%=location.description%></h4>
+		</p>
+		<h4>Rating:<%=location.rating%> (out of 5)</h4>
+	</div>
+	<%
+  }
+  %>
+	</body>
+
+</html>
